@@ -1,0 +1,47 @@
+Greed Island Game Design
+
+- turn based card game
+- 15-20 different cards, 10 copies per card, all cards have transformation limit of 3
+- 10 other NPC players, all players begin with 5 accompany cards
+- 10 cities total
+	- 1 special city: where card shop is located
+	- All other cities offer unique quests to obtain cards 
+- Each city will be a different scene with their own unique:
+	- background image
+	- NPCs & dialogues
+	- music?
+- Each turn, NPC players randomly select an action to take 
+- Costly actions players can take (consume 1 turn)
+	- Travel to an adjacent city
+	- Travel to any city (consumes 1 accompany)
+	- Enter a quest in the current city to earn a card
+	- Use a card that they own
+- Free actions players can take (consume 0 turn)
+	- View all remaining available copies of cards in the game
+	- View your currently held cards
+- Available copies of each card in the game kept track of with multiple dicts (Keys are card names, 
+  values are quantaties remaining.) for both the game world & each individual player 
+- Another dictionary to keep track of transformation limits of all cards in the game (cards
+  can be transformed through spells)
+- Difficulty Levels (increasing # of cards each NPC player will consume per turn)
+	- Easy: 1
+	- Normal: 2
+	- Hard: 3
+- Cards
+	- Accompany: Travel to any city. 
+	- Defensive Wall: Protect yourself from an enemy attack spell.
+	- Reflect: Reflects an enemy attack spell once.
+	- Pickpocket: Steal random card from target player's free pocket.
+	- Mug: Make the target player fly somewhere on the island.
+	- Mimic: Transform a card into a copy of a target card that the caster already owns (it fails if target card's transformation limits is already exceeded)
+	- Clone: Transforms into one random card from target player's cards. This card is not consumed after use.
+	- Fake: Transforms into any random card. This card is not consumed after use.
+	- Dispel: Return all cards from target player transformed with “Fake,” “Clone,” or “Mimic” to their original form.
+	- Relegate: Make the target player fly somewhere on the island.
+	- Peek: View the target player's held cards
+	- Bullet: Destroy one random card held by target player.
+
+
+
+	
+ 
